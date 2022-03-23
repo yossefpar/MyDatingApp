@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,9 +12,11 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TimeagoModule } from 'ngx-timeago';
+import { MemberCardComponent } from '../members/member-card/member-card.component';
 
 @NgModule({
   imports: [
+    RouterModule,
     NgxGalleryModule,
     CommonModule,
     TabsModule.forRoot(),
@@ -28,8 +31,11 @@ import { TimeagoModule } from 'ngx-timeago';
     ButtonsModule.forRoot(),
     TimeagoModule.forRoot()
   ],
-  declarations: [],
+  declarations: [
+    MemberCardComponent
+  ],
   exports:[
+    MemberCardComponent,
     ButtonsModule,
     NgxGalleryModule,
     TabsModule,
